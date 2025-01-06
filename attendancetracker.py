@@ -37,3 +37,4 @@ if menu == 'Attendance':
 
 if menu == 'Show attendance':
     st.table(allattendance)
+    
