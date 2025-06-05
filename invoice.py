@@ -1,4 +1,7 @@
 import streamlit as st
+from fpdf import FPDF #python module to create pdfs
+import base64
+
 
 imagelink = 'shakeshack.png'
 
@@ -79,3 +82,36 @@ with pay1:
 with pay2:
     st.write(':green[Payment Due]')
     st.header(f':green[${total:,}]')
+
+
+def generate_pdf():
+    pdf = FPDF()
+
+    pdf.add_page()
+
+    colX = 10
+    colY = 30
+
+    pdf.image(imagelink,x=colX,y=colY,w=20)
+
+
+    pdf_file = 'shakeshack.pdf'
+    pdf.output(pdf_file)
+    return pdf_file
+
+
+
+call_pdf = generate_pdf()
+
+with open(call_pdf,'rb') as binary:
+    pdf_data = binary.read()
+
+
+if st.button('View Invoice'):
+    write_pdf = base64.b64encode(pdf_data).decode('utf-8')
+
+
+    view_pdf = f'<embed src="data:application/pdf;base64", {write_pdf}"type="application/pdf" width = "100%" height = "600px" />'
+
+    st.markdown(view_pdf,unsafe_allow_html=True)
+    

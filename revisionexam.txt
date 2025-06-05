@@ -1,0 +1,90 @@
+SIMPLE MOCK EXAM
+PASS MARK 20/24                 10mins
+
+
+What is a variable
+a varisble is something that holds the value.
+
+What is # used for
+the # is used for comments
+
+What is the default data type of input statement
+str
+
+Mention 5 rules in creating variables
+-cannot start with a number
+-cannot be pyhton keywords
+-no spaces
+-has to start with _ or any letter
+-names are different for example, apple is different with Apple
+
+Give a code example of if elif else
+x = 5
+
+if x > 5:
+    print("x is greater than 5')
+
+elif x == 5
+    print('x is equal to 5')
+else:
+    print('x is not greater than 5')
+
+Give a code example of try and except using 3 branches of exception
+try:
+    number = 10/0
+
+except zerodivisonrror
+
+Mention 4 types of data with an example each
+
+
+Give a major difference between list, tuple and dictionary
+
+
+Write out 4 manipulation of list using a sample list of your own
+
+
+Give an example of dictionary and show us how to add a new entry and how to replace an existing one
+
+
+Generate numbers from 1-50 with an increment/step of 5
+
+
+Create a string data and convert it to an integer
+
+
+Give an example of the use of boolean
+
+
+What are the two types of comments? With examples
+
+
+What are the two types of print? With examples
+
+
+What is the difference between = and ==
+
+
+What does += do?
+
+
+Write a code to show how to use keyword and positioning arguments in functions
+
+
+What is the extension of python called?
+
+
+Name two types of translation in programming
+
+
+What is high level programming and how is it different from machine code?
+
+
+Give an code example of how to ask a user of a number in python
+
+
+Give an code example of how to concatenate in python
+
+
+What is the difference between print([1,2,3],[4,5,6]) and print([1,2,3]+[4,5,6])?
+
