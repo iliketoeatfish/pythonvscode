@@ -18,7 +18,6 @@ with app1:
     if st.checkbox('Wagyu Beef Tartare: $140'):
         bill +=140
         st.success("Added to menu")
-
 with app2:
     if st.checkbox('Chicken Wings: $60'):
         bill +=60
