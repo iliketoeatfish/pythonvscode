@@ -1,4 +1,10 @@
 import streamlit as st
+import pandas as pd
+
+try:
+    quizfile = pd.read_csv('quizresults.csv')
+except:
+    quizfile = pd.DataFrame()
 
 score = 0
 
@@ -7,9 +13,12 @@ st.header(" :rainbow[HOW MUCH DO YOU KNOW ABOUT ME?]")
 st.image('https://cdn.pixabay.com/photo/2024/10/31/10/08/quiz-time-9163843_640.jpg')
 menu = st.sidebar.selectbox('Menu',['Take quiz','Quiz Result'])
 
+if menu == 'Quiz Results':
+    pass
+
 
 if menu == 'Take quiz':
-    mane = st.text_input('What is your name?')
+    name = st.text_input('What is your name?')
 
     left, center, right = st.columns(3)
 
@@ -153,9 +162,17 @@ if menu == 'Take quiz':
          q8 == 'Choose' or  q9 == 'Choose' or  q10 == 'Choose' or  q11 == 'Choose' or  q12 == 'Choose'):
          st.error("Please answer all questions")
 
-        else:
+        elif name:
             st.subheader('Thank you for doing the quiz!')
-            st.success(f'You got a total score of {score} out of 12')
+            st.success(f'You got a score of {score} out of 12')
+            quizdict = {name:[name],Score:[score]}
+            quiztable = pd.DataFrame(quizdict)
+            quiztable.to_csv('quizresults.csv',mode'a',header=quizfile.empty,index=false)
+
+        else:
+            st.error('I need your name')
+
+        
         
 
         
