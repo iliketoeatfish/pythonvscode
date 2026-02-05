@@ -2,7 +2,7 @@ import streamlit as st
 from fpdf import FPDF #python module to create pdfs
 import base64
 
-
+                 
 imagelink = 'shakeshack.png'
 
 image1, image2, image3 = st.columns([1,3,1])
